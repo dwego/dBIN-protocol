@@ -1,0 +1,16 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "build/encode.o",
+      "src/encode.c"
+    ],
+    "directory": "/Users/dweg0/Documents/dBIN-protocol",
+    "file": "/Users/dweg0/Documents/dBIN-protocol/src/encode.c",
+    "output": "/Users/dweg0/Documents/dBIN-protocol/build/encode.o"
+  }
+]
