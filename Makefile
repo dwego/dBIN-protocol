@@ -1,15 +1,21 @@
 CC = gcc
-CFLAGS = -Wall -Iinclude
+CFLAGS = -Wall -Iinclude -MMD -MP
 
 SRC = $(wildcard src/*.c)
-OBJ = $(SRC:.c=.o)
+OBJ = $(patsubst src/%.c,build/%.o,$(SRC))
+DEP = $(OBJ:.o=.d)
 TARGET = main
 
 $(TARGET): $(OBJ)
 	$(CC) $(OBJ) -o $(TARGET)
 
-src/%.o: src/%.c
+build/%.o: src/%.c | build
 	$(CC) $(CFLAGS) -c $< -o $@
 
+build:
+	mkdir -p build
+
+-include $(DEP)
+
 clean:
-	rm -f src/*.o main
+	rm -rf build main
