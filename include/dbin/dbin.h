@@ -1,6 +1,6 @@
 #pragma once
 
-#include "dbin_types.h"
+#include "dbin/types.h"
 
 typedef struct dbin_msg {
     u16 magic;      // uses only 12 bits (0..0xFFF)

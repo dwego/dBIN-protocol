@@ -1,6 +1,6 @@
 #pragma once
 
-#include "dbin_types.h"
+#include "dbin/types.h"
 
 typedef struct {
     u8    *buf;       // bytes buffer pointer
