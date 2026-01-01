@@ -4,3 +4,6 @@ build/
 
 main
 compile_commands.json
+
+client
+server
